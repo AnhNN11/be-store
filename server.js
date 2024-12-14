@@ -8,10 +8,9 @@ const { dbConnect } = require("./utiles/db");
 const socket = require("socket.io");
 const http = require("http");
 const server = http.createServer(app);
-
 app.use(
   cors({
-    origin: true,
+    origin: ["http://localhost:3000", "http://localhost:3001"],
     credentials: true,
   })
 );
